@@ -11,6 +11,8 @@ test('05. button', () => {
   expect(component.find('button').text()).toEqual(title);
   expect(component.find('button').props().title).toEqual(title);
 
+  component.setProps({ title: 'Hello' });
+  expect(component.find('button').props().title).toEqual('Hello');
   // click
   component.find('button').simulate('click');
   expect(component.find('button').text()).toEqual('Clicked');

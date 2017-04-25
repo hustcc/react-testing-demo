@@ -9,7 +9,7 @@ export default class MyComponent extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState(...nextProps);
+    this.setState(nextProps);
   }
 
   handleClick() {
