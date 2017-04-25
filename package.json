@@ -31,20 +31,12 @@
   "jest": {
     "setupFiles": ["./__tests__/setup.js"],
     "testRegex": "(/__tests__/.*_(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
     "moduleNameMapper": {
       "^.+\\.(css|less)$": "<rootDir>/.jestignore.js"
     },
     "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/*.{js,jsx}",
-      "!**/node_modules/**",
-      "!**/vendor/**"
-    ]
+    "collectCoverageFrom": ["src/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"],
+    "moduleDirectories": ["node_modules", "src"]
   }
 }
