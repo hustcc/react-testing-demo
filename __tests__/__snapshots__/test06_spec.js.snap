@@ -7,7 +7,7 @@ exports[`06. Link changes the class when hovered 1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Alibab
+  Alibaba
 </a>
 `;
 
@@ -18,7 +18,7 @@ exports[`06. Link changes the class when hovered 2`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Alibab
+  Alibaba
 </a>
 `;
 
@@ -29,6 +29,6 @@ exports[`06. Link changes the class when hovered 3`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
 >
-  Alibab
+  Alibaba
 </a>
 `;

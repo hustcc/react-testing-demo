@@ -16,6 +16,7 @@
 1. test01 ~ test04: **jest**, test logical module.
 2. test05: **jest** + **enzyme**, test react component with assert.
 3. test06: **jest**, test react component with snapshots.
+4. test07: **jest** + **jsdom**, test react component, and mock the document function in `setupFiles`.
 
 
 ## 3. Run

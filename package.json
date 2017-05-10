@@ -11,6 +11,7 @@
     "eslint-config-airbnb": "^14.1.0",
     "jest": "^19.0.2",
     "react-test-renderer": "^15.5.4",
+    "jsdom": "^10.1.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
@@ -29,7 +30,7 @@
     "clear": "jest -u"
   },
   "jest": {
-    "setupFiles": ["./__tests__/setup.js"],
+    "setupFiles": ["<rootDir>/__tests__/setup.js"],
     "testRegex": "(/__tests__/.*_(test|spec))\\.(ts|tsx|js)$",
     "moduleFileExtensions": ["ts", "tsx", "js", "json"],
     "moduleNameMapper": {
@@ -37,6 +38,14 @@
     },
     "collectCoverage": true,
     "collectCoverageFrom": ["src/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 50,
+        "functions": 50,
+        "lines": 50,
+        "statements": 50
+      }
+    },
     "moduleDirectories": ["node_modules", "src"]
   }
 }

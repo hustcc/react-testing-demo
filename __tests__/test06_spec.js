@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 
 test('06. Link changes the class when hovered', () => {
   const component = renderer.create(
-    <Link page="http://alibaba-inc.com">Alibab</Link>
+    <Link page="http://alibaba-inc.com">Alibaba</Link>
   );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
