@@ -8,7 +8,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "enzyme": "^2.8.2",
-    "eslint-config-airbnb": "^14.1.0",
     "jest": "^19.0.2",
     "react-test-renderer": "^15.5.4",
     "jsdom": "^10.1.0",
@@ -27,6 +26,8 @@
     "test": "NODE_ENV=test && npm run jest && npm run lint",
     "lint": "eslint src",
     "jest": "jest",
+    "cover": "jest --coverage",
+    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "clear": "jest -u"
   },
   "jest": {
