@@ -19,8 +19,8 @@
     "eslint-config-airbnb-base": "^11.1.0"
   },
   "dependencies": {
-    "react": "^15.5.0",
-    "react-dom": "^15.5.0"
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
   },
   "scripts": {
     "test": "NODE_ENV=test && npm run jest && npm run lint",
