@@ -1,6 +1,6 @@
 kind: pipeline
+type: docker
 name: default
-
 steps:
 - name: test
   image: node:latest
@@ -20,4 +20,3 @@ steps:
     event:
     - pull_request
     - push
-  
