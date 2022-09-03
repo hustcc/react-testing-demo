@@ -5,21 +5,10 @@ test:
       - DEBUG=*
     commands:
       - npm install
-      - npm run test
-      
+      - npm run test   
   build:
     image: node:latest
     environment:
       - DEBUG=*
     commands:
       - npm install
-
-  publish:
-    image: plugins/docker
-    repo: youssefbxs
-    username: youssefbxs
-    password: D_1234_4321fk
-    tags: [ "latest", "1.0" ]
-    when:
-      branch: master
-      event: push
