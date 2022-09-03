@@ -1,10 +1,25 @@
-kind: pipeline
-type: docker
-name: DroneCIPIP
+pipeline:
+test:
+    image: node:latest
+    environment:
+      - DEBUG=*
+    commands:
+      - npm install
+      - npm run test
+      
+  build:
+    image: node:latest
+    environment:
+      - DEBUG=*
+    commands:
+      - npm install
 
-steps:
-- name: test
-  image: node:10
-  commands:
-  - npm i
-  - npm run test
+  publish:
+    image: plugins/docker
+    repo: youssefbxs
+    username: youssefbxs
+    password: D_1234_4321fk
+    tags: [ "latest", "1.0" ]
+    when:
+      branch: master
+      event: push
