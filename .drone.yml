@@ -2,16 +2,25 @@ kind: pipeline
 name: default
 
 steps:
-test:
-    image: node:latest
-    environment:
-      - DEBUG=*
-    commands:
-      - npm install
-      - npm run test   
-  build:
-    image: node:latest
-    environment:
-      - DEBUG=*
-    commands:
-      - npm install
+- name: test
+  image: node:latest
+  commands:
+  - npm install
+  - npm run test 
+  environment:
+    GOPROXY: https://goproxy.cn # proxy.golang.org is blocked in China, this proxy is not
+    GOSUMDB: sum.golang.org
+  when:
+    event:
+    - pull_request
+    - push
+    
+- name: build
+  image: node:latest
+  commands:
+  - npm install
+  when:
+    event:
+    - pull_request
+    - push
+  
