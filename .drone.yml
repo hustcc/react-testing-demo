@@ -1,10 +1,10 @@
 kind: pipeline
 type: docker
-name: default
+name: DroneCIPIP
 
 steps:
 - name: test
   image: node:10
   commands:
   - npm i
-  - npm test
+  - npm run test
