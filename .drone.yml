@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: test
+  image: node:10
+  commands:
+  - npm i
+  - npm test
