@@ -1,4 +1,7 @@
-pipeline:
+kind: pipeline
+name: default
+
+steps:
 test:
     image: node:latest
     environment:
