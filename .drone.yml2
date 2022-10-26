@@ -1,0 +1,22 @@
+kind: pipeline
+type: kubernetes
+name: default
+steps:
+- name: test
+  image: node:latest
+  commands:
+  - npm install
+  - npm run test 
+  when:
+    event:
+    - pull_request
+    - push
+    
+- name: build
+  image: node:latest
+  commands:
+  - npm install
+  when:
+    event:
+    - pull_request
+    - push
